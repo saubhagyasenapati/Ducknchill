@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ducknchill/static/css/main.fef62fac.css",
+    "main.js": "/ducknchill/static/js/main.c2d6f128.js",
+    "static/media/hero8.png": "/ducknchill/static/media/hero8.0641fe1bdcd507770c14.png",
+    "static/media/Room3.jpg": "/ducknchill/static/media/Room3.cdb9d4763a3ca8e4930f.jpg",
+    "static/media/pic1.jpg": "/ducknchill/static/media/pic1.27b7b04bb760cd8a9cf0.jpg",
+    "static/media/Room4.jpg": "/ducknchill/static/media/Room4.20d69bca566ff9426e9e.jpg",
+    "static/media/Room5.jpg": "/ducknchill/static/media/Room5.00f828213eae5fc9fd74.jpg",
+    "static/media/Room2.jpg": "/ducknchill/static/media/Room2.b5b13a39adbd90dbd0dd.jpg",
+    "static/media/Tripadvisor.png": "/ducknchill/static/media/Tripadvisor.9b5bdc5319cae1e4853d.png",
+    "index.html": "/ducknchill/index.html",
+    "main.fef62fac.css.map": "/ducknchill/static/css/main.fef62fac.css.map",
+    "main.c2d6f128.js.map": "/ducknchill/static/js/main.c2d6f128.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fef62fac.css",
+    "static/js/main.c2d6f128.js"
+  ]
+}
