@@ -7,11 +7,11 @@ html{
   scroll-behavior: smooth;
 }
 body {
-  margin: 1rem 2rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
- 
+
+
 }
 
 code {
@@ -25,4 +25,5 @@ code {
 }
 ::-webkit-scrollbar-thumb{
   background-color: #f2f2f2;
+
 }
