@@ -71,7 +71,7 @@ function MyVerticallyCenteredModal(props) {
               <p className="title">Send Us Details for Booking</p>
               <div class="contact-box">
                 <form
-                  action="https://formsubmit.co/sikan2601@gmail.com"
+                  action="https://formspree.io/f/xzbqyaob"
                   method="post"
                 >
                   <input
@@ -457,6 +457,7 @@ const Sec = styled.section`
       font-size: 0.8rem;
       margin-bottom: 5px;
       transition: 0.3s;
+      width: 100%;
     }
     .boxdate {
       display: flex;

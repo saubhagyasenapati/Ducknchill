@@ -9,7 +9,7 @@ const Contactus = () => {
 	<div class="container">
     <h2 className='header'>Contact Us</h2>
 		<div class="contact-box">
-				<form action="https://formsubmit.co/sikan2601@gmail.com" method="post">
+				<form action="https://formspree.io/f/xzbqyaob" method="post">
                 <input type="text" class="field" placeholder="Your Name" name="Name" required/>
 				<input type="text" class="field" placeholder="Your Email" name="Email" required/>
 				<input type="text" class="field" placeholder="Phone" name="Phone Number" required/>
@@ -149,10 +149,10 @@ h2:after{
         padding: 2rem 2rem;
 	}
 .field{
-    width:70%;
+    width:90%;
 }
 .btn{
-    width:70%;
+    width:90%;
 }
 label{
     font-family: "Lobster", cursive;
