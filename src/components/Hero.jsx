@@ -1,15 +1,40 @@
 import React from "react";
 import styled from "styled-components";
 import homeimage from "../Asset/hero.jpg";
+import homeimage2 from "../Asset/hero2nd.png";
+import homeimage3 from "../Asset/hero3rd.png";
 import Navbar from "./Navbar";
-
+import { Carousel } from "react-bootstrap";
 export default function Hero() {
   return (
     
     <Section id="hero">
       <div className="heromain">
         <div className="background">
-          <img className="heroimage" src={homeimage} alt="" />
+         
+          <Carousel className="heroimage" controls={false} indicators={false} fade>
+                      <Carousel.Item interval={7000}>
+                        <img
+                          className="d-block mx-auto"
+                          src={homeimage}
+                          alt="First slide"
+                        />
+                      </Carousel.Item>
+                      <Carousel.Item interval={7000}>
+                        <img
+                          className="d-block mx-auto"
+                          src={homeimage2}
+                          alt="First slide"
+                        />
+                      </Carousel.Item>
+                      <Carousel.Item interval={7000}>
+                        <img
+                          className="d-block mx-auto"
+                          src={homeimage3}
+                          alt="First slide"
+                        />
+                      </Carousel.Item>
+              </Carousel>
         </div>
         <div className="maintext">
           <h1 className="textmain">Welcome To Our Humble Abort</h1>
@@ -32,7 +57,11 @@ const Section = styled.section`
 .heroimage{
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  img{
+    object-fit: cover;
+    width: 100vw;
+  height: 100vh;
+  }
 }
   .background {
     height: 100%;
