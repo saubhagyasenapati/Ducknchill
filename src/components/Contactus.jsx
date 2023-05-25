@@ -1,26 +1,79 @@
 import React from 'react'
 import styled from 'styled-components'
+import emailjs from 'emailjs-com';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Contactus = () => {
-   
+	const sendEmail = (e) => {
+		e.preventDefault();
+	  
+		// EmailJS parameters
+		const serviceID = process.env.REACT_APP_serviceID;
+		const templateID =  process.env.REACT_APP_templateID;
+		const userID = process.env.REACT_APP_userID;
+	  
+		// Set the email parameters
+		const templateParams = {
+		  to_name:'DuckNChill',
+		  from_name: e.target.Name.value,
+		  from_email: e.target.Email.value,
+		  phone_number: e.target['Phone Number'].value,
+		  no_of_people: e.target['No Of People'].value,
+		  check_in: e.target['Check In'].value,
+		  check_out: e.target['Check Out'].value,
+		};
+	  
+		// Send the email
+		emailjs.send(serviceID, templateID, templateParams, userID)
+		  .then((response) => {
+			toast("Form Submitted Successfully!");
+		  })
+		  .catch((error) => {
+			toast("Form Couldn't be Submitted!");
+		  });
+	  
+		// Reset the form after submission
+		e.target.reset();
+		
+	  };
   return (
     <Section id="enquiry">
 	<div class="container">
     <h2 className='header'>Booking Enquiry</h2>
 		<div class="contact-box">
-				<form name='contact' data-netlify="true" onSubmit="submit">
+				<form name='contact' onSubmit={sendEmail}>
                 <input type="text" class="field" placeholder="Your Name" name="Name" required/>
 				<input type="text" class="field" placeholder="Your Email" name="Email" required/>
 				<input type="text" class="field" placeholder="Phone" name="Phone Number" required/>
-                <input type="number" class="field" placeholder='No of Persons' name="No Of People" />
+                <input type="number" class="field" placeholder='No of Persons' name="No Of People"  min="1" max="20"/>
                  <br /> <label for="html" className='label'>Check In</label><br />
                 <input placeholder="Check In" class="field" type='date' name="Check In"/>
                 <br /> <label for="html">Check Out</label><br />
                 <input placeholder="Check Out" class="field" type="date" name="Check Out"/>
                 <button class="btn" type='submit'>Send</button>
                 </form>
-			
 			</div>
+			<div className='contactdetails'>
+				<p>Contact us</p>
+				<div>
+				<a href="mailto:">DucknChill-Agonda@Beaches-Of-Goa.com</a>
+				<a href="tel:+917008719018">+91 7008719018</a>
+				</div>
+				
+			</div>
+			<ToastContainer
+position="bottom-right"
+autoClose={3000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
 	</div>
     </Section>
 
@@ -32,7 +85,36 @@ export default Contactus
 const Section=styled.section`  
 margin-top:2rem;    
 width:100%;
-height:100%;    
+height:100%;   
+.contactdetails{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1rem;
+	p{
+		color: white;
+		font-size:1.3rem;
+		font-family: "Lobster", cursive;
+	}
+	div{
+		display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap:0.8rem;
+		a{
+		color: white;
+		text-decoration:none;
+		font-size:1.2rem;
+	
+		:hover{
+			color: #ada5a5;
+		}
+	}
+	}
+	
+} 
 .header{
     font-family: "Lobster", cursive;
     font-size: 4rem;

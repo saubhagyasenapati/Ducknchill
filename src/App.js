@@ -8,7 +8,7 @@ import Facilities from './components/Facilities'
 import scrollreveal from "scrollreveal";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Resturant from './components/Resturant'
-import MyGallery from './components/MyGallery'
+// import MyGallery from './components/MyGallery'
 import About from './components/About'
 import Whatsapp from './components/Whatsapp'
 import Contactus from './components/Contactus'
@@ -54,7 +54,7 @@ import Awards from './components/Awards'
     <Whatsapp/>
     <Awards/>
 <Policies/>
-<MyGallery/>
+{/* <MyGallery/> */}
   <Contactus/>
   <Footer/>
       <Routes>

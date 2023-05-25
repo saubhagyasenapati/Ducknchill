@@ -20,8 +20,8 @@ export default function Footer() {
       <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
       <li class="menu__item"><a class="menu__link" href="#accomodation">Accomodation</a></li>
       <li class="menu__item"><a class="menu__link" href="#restaurant">Restaurant</a></li>
-      <li class="menu__item"><a class="menu__link" href="#locaton">Location </a></li>
-      <li class="menu__item"><a class="menu__link" href="#contact">Contact </a></li>
+      <li class="menu__item"><a class="menu__link" href="#location">Location </a></li>
+      <li class="menu__item"><a class="menu__link" href="#enquiry">Enquiry</a></li>
 
     </ul>
     <a href="tel:+917008719018" className='details'>+91 7008719018</a>

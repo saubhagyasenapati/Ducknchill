@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import homeimage from "../Asset/LandingPage/hero7.jpg";
-import homeimage2 from "../Asset/LandingPage/hero4.jpg";
-import homeimage3 from "../Asset/LandingPage/hero5.jpg";
+import homeimage from "../Asset/LandingPage/hero7.webp";
+import homeimage2 from "../Asset/LandingPage/hero4.webp";
+import homeimage3 from "../Asset/LandingPage/hero5.webp";
 
 import { Carousel } from "react-bootstrap";
 export default function Hero() {
@@ -21,6 +21,7 @@ export default function Hero() {
                 className="d-block mx-auto"
                 src={homeimage}
                 alt="First slide"
+                loading="eager"
               />
             </Carousel.Item>
             <Carousel.Item interval={3000}>
@@ -28,6 +29,7 @@ export default function Hero() {
                 className="d-block mx-auto"
                 src={homeimage2}
                 alt="First slide"
+                loading="eager"
               />
             </Carousel.Item>
             <Carousel.Item interval={4000}>
@@ -35,6 +37,7 @@ export default function Hero() {
                 className="d-block mx-auto"
                 src={homeimage3}
                 alt="First slide"
+                loading="eager"
               />
             </Carousel.Item>
           </Carousel>

@@ -97,7 +97,7 @@ ul{
             transition:0ms.1s ease-in-out ;
             font-weight:600;
             &:hover{
-                color:#646670;
+                color:#a5a6af;
                 font-weight:700;
             }
         }

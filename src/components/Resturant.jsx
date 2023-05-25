@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Carousel from "react-bootstrap/Carousel";
-import image1 from "../Asset/Restaurant/photo1.png"
-import image2 from "../Asset/Restaurant/photo2.jpg"
-import image4 from "../Asset/Restaurant/photo4.jpg"
-import image5 from "../Asset/Restaurant/photo5.jpg"
-
-import image7 from "../Asset/Restaurant/photo7.jpg"
-import image8 from "../Asset/Restaurant/photo9.jpg"
+import image1 from "../Asset/Restaurant/photo1.webp";
+import image2 from "../Asset/Restaurant/photo2.webp";
+import image4 from "../Asset/Restaurant/photo4.webp";
+import image5 from "../Asset/Restaurant/photo5.webp";
+import image7 from "../Asset/Restaurant/photo7.webp";
+import image8 from "../Asset/Restaurant/photo9.webp";
 const Resturant = () => {
   return (
     <Section id="restaurant">
@@ -15,50 +14,26 @@ const Resturant = () => {
         <h1>Restaurant & Bar</h1>
       </div>
       <div className="resturantbox">
-      <Carousel variant='dark'>
-                <Carousel.Item interval={2000}>
-                <img
-                  className="d-block mx-auto"
-                  src={image1}
-                  alt="First slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item interval={2000}>
-                <img
-                  className="d-block mx-auto"
-                  src={image2}
-                  alt="Second slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item  interval={2000}>
-                <img
-                  className="d-block mx-auto"
-                  src={image4}
-                  alt="Third slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item  interval={2000}>
-                <img
-                  className="d-block mx-auto"
-                  src={image5}
-                  alt="Third slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item  interval={2000}>
-                <img
-                  className="d-block mx-auto"
-                  src={image7}
-                  alt="Third slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item  interval={2000}>
-                <img
-                  className="d-block mx-auto"
-                  src={image8}
-                  alt="Third slide"
-                />
-              </Carousel.Item>
-            </Carousel>
+        <Carousel variant="dark">
+          <Carousel.Item interval={2000}>
+            <img className="d-block mx-auto" src={image1} alt="First slide" />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img className="d-block mx-auto" src={image2} alt="Second slide" />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img className="d-block mx-auto" src={image4} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img className="d-block mx-auto" src={image5} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img className="d-block mx-auto" src={image7} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img className="d-block mx-auto" src={image8} alt="Third slide" />
+          </Carousel.Item>
+        </Carousel>
         <div className="resturantDetail">
           <p className="aboutrestaurant">
             Here at Duck n Chill, we have a cozy bar and restaurant overlooking
@@ -101,7 +76,7 @@ const Section = styled.section`
   }
   .carousel-item {
     img {
-      object-fit:contain;
+      object-fit: contain;
       height: 600px;
       width: 100%;
       background-color: white;
@@ -110,7 +85,7 @@ const Section = styled.section`
   .resturantDetail {
     width: 50%;
     padding: 1rem;
-    p { 
+    p {
       font-size: 1.3rem;
       font-family: "Archivo", sans-serif;
     }
@@ -122,10 +97,9 @@ const Section = styled.section`
   .resturantbox {
     display: flex;
     flex-direction: row;
- 
   }
   @media screen and (max-device-width: 1080px) {
-    padding:0.5rem;
+    padding: 0.5rem;
     h1 {
       font-size: 3rem;
       margin-top: 1.5rem;
@@ -147,13 +121,13 @@ const Section = styled.section`
       padding: 1rem;
     }
     .carousel-item {
-    img {
-      object-fit:contain;
-      height: 400px;
-      width: 100%;
-      background-color: white;
+      img {
+        object-fit: contain;
+        height: 400px;
+        width: 100%;
+        background-color: white;
+      }
     }
-  }
     .resturantbox {
       display: flex;
       flex-direction: column;

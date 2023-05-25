@@ -1,35 +1,71 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Room11 from "../Asset/Beach front hut/pic1.jpg";
-import Room12 from "../Asset/Beach front hut/pic2.jpg";
-import Room13 from "../Asset/Beach front hut/pic3.jpg";
-import Room14 from "../Asset/Beach front hut/pic4.jpg";
-import Room21 from "../Asset/Seaview hut/Room2.jpg";
-import Room22 from "../Asset/Seaview hut/pic2.jpg";
-import Room23 from "../Asset/Seaview hut/pic3.jpg";
-import Room24 from "../Asset/Seaview hut/pic4.jpg";
-import Room25 from "../Asset/Seaview hut/pic5.jpg";
-import Room31 from "../Asset/Standard hut/Room3.jpg";
-import Room32 from "../Asset/Standard hut/pic1.jpg";
-import Room33 from "../Asset/Standard hut/pic2.jpg";
-import Room34 from "../Asset/Standard hut/pic6.jpg";
-import Room35 from "../Asset/Standard hut/pic4.jpg";
-import Room36 from "../Asset/Standard hut/pic5.jpg";
-import Room41 from "../Asset/Superior Ac cottage/Room4.jpg";
-import Room42 from "../Asset/Superior Ac cottage/pic1.jpg";
-import Room43 from "../Asset/Superior Ac cottage/pic2.jpg";
-import Room44 from "../Asset/Superior Ac cottage/pic3.jpg";
-import Room45 from "../Asset/Superior Ac cottage/pic4.jpg";
-import Room46 from "../Asset/Superior Ac cottage/pic5.jpg";
-import Room51 from "../Asset/Budgett hut/Room5.jpg";
-import Room52 from "../Asset/Budgett hut/pic1.jpg";
-import Room53 from "../Asset/Budgett hut/pic2.jpg";
-import Room54 from "../Asset/Budgett hut/pic3.jpg";
+import Room11 from "../Asset/Beach front hut/pic1.webp";
+import Room12 from "../Asset/Beach front hut/pic2.webp";
+import Room13 from "../Asset/Beach front hut/pic3.webp";
+import Room14 from "../Asset/Beach front hut/pic4.webp";
+import Room21 from "../Asset/Seaview hut/Room2.webp";
+import Room22 from "../Asset/Seaview hut/pic2.webp";
+import Room23 from "../Asset/Seaview hut/pic3.webp";
+import Room24 from "../Asset/Seaview hut/pic4.webp";
+import Room25 from "../Asset/Seaview hut/pic5.webp";
+import Room31 from "../Asset/Standard hut/Room3.webp";
+import Room32 from "../Asset/Standard hut/pic1.webp";
+import Room33 from "../Asset/Standard hut/pic2.webp";
+import Room34 from "../Asset/Standard hut/pic6.webp";
+import Room35 from "../Asset/Standard hut/pic4.webp";
+import Room36 from "../Asset/Standard hut/pic5.webp";
+import Room41 from "../Asset/Superior Ac cottage/Room4.webp";
+import Room42 from "../Asset/Superior Ac cottage/pic1.webp";
+import Room43 from "../Asset/Superior Ac cottage/pic2.webp";
+import Room44 from "../Asset/Superior Ac cottage/pic3.webp";
+import Room45 from "../Asset/Superior Ac cottage/pic4.webp";
+import Room46 from "../Asset/Superior Ac cottage/pic5.webp";
+import Room51 from "../Asset/Budgett hut/Room5.webp";
+import Room52 from "../Asset/Budgett hut/pic1.webp";
+import Room53 from "../Asset/Budgett hut/pic2.webp";
+import Room54 from "../Asset/Budgett hut/pic3.webp";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
+import emailjs from 'emailjs-com';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function MyVerticallyCenteredModal(props) {
- 
+  const sendEmail = (e) => {
+		e.preventDefault();
+	  
+		// EmailJS parameters
+		const serviceID = process.env.REACT_APP_serviceID;
+		const templateID =  process.env.REACT_APP_templateID2;
+		const userID = process.env.REACT_APP_userID;
+	  
+		// Set the email parameters
+		const templateParams = {
+		  to_name:'DuckNChill',
+      room_type:e.target.Room.value,
+		  from_name: e.target.Name.value,
+		  from_email: e.target.Email.value,
+		  phone_number: e.target['Phone Number'].value,
+		  no_of_people: e.target['No Of People'].value,
+		  check_in: e.target['Check In'].value,
+		  check_out: e.target['Check Out'].value,
+		};
+	  
+		// Send the email
+		emailjs.send(serviceID, templateID, templateParams, userID)
+		  .then((response) => {
+			toast("Form Submitted Successfully!");
+		  })
+		  .catch((error) => {
+			toast("Form Couldn't be Submitted!");
+		  });
+	  
+		// Reset the form after submission
+		e.target.reset();
+		
+	  };
   return (
     <Modal
       {...props}
@@ -69,13 +105,7 @@ function MyVerticallyCenteredModal(props) {
             <div className="Modalboxright">
               <p className="title">Send Us Details for Booking</p>
               <div class="contact-box">
-                <form
-                  // action="https://formspree.io/f/xzbqyaob"
-                  // method="post"
-                  name="contact"
-                  data-netlify="true"
-                   onSubmit="submit"
-                >
+              <form name='contact' onSubmit={sendEmail}>
                   <input
                     type="hidden"
                     class="field"
@@ -110,6 +140,7 @@ function MyVerticallyCenteredModal(props) {
                     class="field"
                     placeholder="No of Persons"
                     name="No Of People"
+                    min="1" max="20"
                   />
                   <div className="boxdate">
                   <label for="html" className='label'>Check In</label>
@@ -124,6 +155,18 @@ function MyVerticallyCenteredModal(props) {
               </div>
             </div>
           </div>
+          <ToastContainer
+position="bottom-right"
+autoClose={3000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
         </Sec>
         
       </Modal.Body>
