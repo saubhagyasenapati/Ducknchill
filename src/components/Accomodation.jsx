@@ -29,12 +29,11 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
 function MyVerticallyCenteredModal(props) {
-  const [type1, setType1] = useState('text');
-  const [type2, setType2] = useState('text');
+ 
   return (
     <Modal
       {...props}
-      size="lg"
+      fullscreen={true}
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -71,8 +70,11 @@ function MyVerticallyCenteredModal(props) {
               <p className="title">Send Us Details for Booking</p>
               <div class="contact-box">
                 <form
-                  action="https://formspree.io/f/xzbqyaob"
-                  method="post"
+                  // action="https://formspree.io/f/xzbqyaob"
+                  // method="post"
+                  name="contact"
+                  data-netlify="true"
+                   onSubmit="submit"
                 >
                   <input
                     type="hidden"
@@ -167,15 +169,7 @@ export default function Accomodation() {
         "Our 2 budget huts are built the same way as the standard huts, just a little further away from the beach.",
     },
   ];
-  const roomtype = [
-    "All",
-    "Beach Front Huts",
-    "Sea View Huts",
-    "Standard Huts",
-    "Superior AC Cottages",
-    "Budget Huts",
-  ];
-  const [active, setActive] = useState(1);
+
   const handleScroll = (event) => {
     const container = event.target;
     const scrollAmount = event.deltaY;
@@ -209,21 +203,22 @@ export default function Accomodation() {
               >
                 View Room
               </Button>
-              <MyVerticallyCenteredModal
+             
+            </div>
+          );
+        })}
+         <MyVerticallyCenteredModal
                 show={modalShow}
                 onHide={() => setModalShow(false)}
                 room={modalData}
               />
-            </div>
-          );
-        })}
       </div>
     </Section>
   );
 }
 
 const Section = styled.section`
-  padding: 3rem;
+  padding: 1rem;
  
   .title {
     text-align: center;
@@ -236,17 +231,17 @@ const Section = styled.section`
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    max-width:90%;
+    max-width:100%;
     .roomimages {
       margin: 1.5rem;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 1rem;
       display: inline-block;
       gap: 0.5rem;
       flex: 0 0 auto;
       background-color: #f2f2f2;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      width: 40%;
+      width: 45%;
       h3{
         margin-top:0.5rem;
             font-family: 'Lobster', cursive;
@@ -257,14 +252,15 @@ const Section = styled.section`
       img {
         width: 100%;
         border-radius: 1rem;
-        height: 400px;
+        height: 450px;
         margin-top: 1rem;
+        object-fit:cover;
       }
       .roombutton{
-        padding:0.4rem ;
-        border-radius:0.5rem;
+        padding:0.5rem ;
+        border-radius:0.7rem;
         background-color:#000 ;
-        color:#fff
+        color:#fff;
         border:none;
       }
     }
@@ -289,9 +285,8 @@ const Section = styled.section`
   }
   .container {
     padding: 1rem;
-     
+     width:100%;
     .roomimages {
-
       width: 80%;
     
     }
@@ -299,18 +294,18 @@ const Section = styled.section`
   }
 
   @media  screen and (max-device-width: 600px) {
-    padding: 0.6rem;
+    padding: 0.3rem;
   .container {
-    padding: 0rem;
+    padding: 0.3rem;
     width:100%;
     .roomimages {
         margin: 1rem;
-      padding: 0.3rem;
-      width: 70%;
+      padding: 0.5rem;
+      width: 80%;
       img {
         width: 100%;
         border-radius: 1rem;
-        height: 200px;
+        height: 250px;
         margin-top: 1rem;
       }
     }
@@ -325,6 +320,7 @@ const Sec = styled.section`
     font-family: "Lobster", cursive;
     font-size:1rem; 
     margin-right:3px;
+    width:20% ;
 }
   .Modalbox {
     display: flex;
@@ -357,13 +353,13 @@ const Sec = styled.section`
     .carousel-item {
       img {
         object-fit: cover;
-        height: 300px;
+        height: 500px;
         width: 100%;
       }
     }
   }
   .Modalboxright {
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
     width: 50%;
     .field {
       width: 100%;
@@ -393,7 +389,7 @@ const Sec = styled.section`
     }
 
     .btn:hover {
-      background-color: #27ae60;
+      background-color: #232B2B;
     }
 
     .field:focus {
@@ -443,7 +439,7 @@ const Sec = styled.section`
     .carousel-item {
       img {
         object-fit: cover;
-        height: 300px;
+        height: 350px;
         width: 100%;
       }
     }
