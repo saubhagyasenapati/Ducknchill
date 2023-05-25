@@ -3,12 +3,16 @@ import styled from 'styled-components'
 import facility1 from '../Asset/Facility/facility1.png'
 import facility2 from '../Asset/Facility/facility2.png'
 import facility3 from '../Asset/Facility/facility3.png'
-import facility4 from '../Asset/Facility/facility4.png'
+import facility4 from '../Asset/Facility/facilty8.png'
 import facility5 from '../Asset/Facility/facility5.png'
-import facility6 from '../Asset/Facility/facility6.png'
+import facility6 from '../Asset/Facility/facility7.png'
 
 export default function Facilities() {
    const data=[
+    {
+      icon:facility4,
+      title:"Pet-Friendly"
+    },
     {
       icon:facility1,
       title:"Free Wi-Fi"
@@ -22,16 +26,12 @@ export default function Facilities() {
       title:"24hr Room Service"
     },
     {
-      icon:facility4,
-      title:"Laundry & Daily Housekeeping"
-    },
-    {
       icon:facility5,
       title:"Direct Beach access"
     },
     {
       icon:facility6,
-      title:"Airport Shuttle"
+      title:"Bike&Scooty Rental"
     }
     
    ];

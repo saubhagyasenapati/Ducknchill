@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import homeimage from "../Asset/hero.jpg";
-import homeimage2 from "../Asset/hero2nd.png";
-import homeimage3 from "../Asset/hero3rd.png";
-import Navbar from "./Navbar";
+import homeimage from "../Asset/LandingPage/hero7.jpg";
+import homeimage2 from "../Asset/LandingPage/hero4.jpg";
+import homeimage3 from "../Asset/LandingPage/hero5.jpg";
+
 import { Carousel } from "react-bootstrap";
 export default function Hero() {
   return (
     <Section id="hero">
-      <div className="heromain">
+      <div className="heromain">  
         <div className="background">
           <Carousel
             className="heroimage"
@@ -16,21 +16,21 @@ export default function Hero() {
             indicators={false}
             fade
           >
-            <Carousel.Item interval={5000}>
+            <Carousel.Item interval={4000}>
               <img
                 className="d-block mx-auto"
                 src={homeimage}
                 alt="First slide"
               />
             </Carousel.Item>
-            <Carousel.Item interval={5000}>
+            <Carousel.Item interval={3000}>
               <img
                 className="d-block mx-auto"
                 src={homeimage2}
                 alt="First slide"
               />
             </Carousel.Item>
-            <Carousel.Item interval={5000}>
+            <Carousel.Item interval={4000}>
               <img
                 className="d-block mx-auto"
                 src={homeimage3}
@@ -47,7 +47,7 @@ export default function Hero() {
             and beautiful Agonda Beach, South Goa.
           </p>
           <button className="book">
-            <a href="https://hotels.cloudbeds.com/reservation/U2RBL4"  className="linktag" target="_blank" rel="noopener noreferrer">
+            <a href="#enquiry"  className="linktag"  rel="noopener noreferrer">
               Book A Room
             </a>
           </button>

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 const About = () => {
   return (
-    <Section>
+    <Section id='about'>
            <div className='content'>
             <div className='title'>
             <h1>About</h1>
@@ -11,7 +11,10 @@ const About = () => {
  </p> 
     <p>There is a choice of beach huts to suit different budgets, but all have king or double bedrooms, internal en-suite bathrooms, fans and balconies where you can listen to the sound of the waves as you fall peacefully asleep.</p>
             </div>
-          
+          <div className='timming'>
+            <p>Check In:1:00PM</p>
+            <p>Check Out:11:00AM</p>
+          </div>
         </div>
     </Section>
   )
@@ -19,7 +22,7 @@ const About = () => {
 
 export default About
 const Section=styled.section`
-  padding:1.6rem ;
+  padding:2.5rem ;
   .content
  {   
     margin-top:2rem;
@@ -39,6 +42,18 @@ const Section=styled.section`
              font-family: 'Archivo', sans-serif;
         }
     }
+    .timming{
+      display:flex;
+      align-items:center;
+      justify-content: space-evenly;
+      flex-direction:row;
+      margin-top: 2rem;
+      p{
+        font-family: 'Archivo', sans-serif;
+        font-weight:800;
+        font-size:1.7rem;
+      }
+    }
  }
  @media only screen and (max-device-width: 980px){
     padding:0.5rem ; 
@@ -56,6 +71,13 @@ const Section=styled.section`
              font-size:1rem;
           
         }
+    }
+    .timming{
+      p{
+
+        font-weight:800;
+        font-size:1.2rem;
+      }
     }
  }
  }

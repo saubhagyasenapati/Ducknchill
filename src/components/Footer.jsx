@@ -9,11 +9,11 @@ export default function Footer() {
        <footer class="footer">
  <h1 className='title'>DuckNChill</h1>
     <ul class="social-icon">
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://m.facebook.com/people/DucknChill-Agonda/100063791744205/" target="_blank">
       <BsFacebook/>
         </a></li>
-      <li class="social-icon__item"> <a class="social-icon__link" href="https://www.tripadvisor.com/Hotel_Review-g816969-d4978980-Reviews-Duck_n_Chill-Agonda_South_Goa_District_Goa.html" target="_blank" rel="noopener noreferrer"><SiTripadvisor/></a></li>
-      <li class="social-icon__item">   <a href="https://wa.me/7008719018" class="social-icon__link" target='_blank'  rel="noopener noreferrer"> <IoLogoWhatsapp/></a></li>
+      <li class="social-icon__item"> <a class="social-icon__link"  href="https://www.tripadvisor.com/Hotel_Review-g816969-d4978980-Reviews-Duck_n_Chill-Agonda_South_Goa_District_Goa.html" target="_blank" rel="noopener noreferrer"><SiTripadvisor/></a></li>
+      <li class="social-icon__item">   <a href="https://wa.me/7008719018" target="_blank" class="social-icon__link"  rel="noopener noreferrer"> <IoLogoWhatsapp/></a></li>
     </ul>
     <ul class="menu">
       <li class="menu__item"><a class="menu__link" href="/">Home</a></li>
@@ -24,11 +24,11 @@ export default function Footer() {
       <li class="menu__item"><a class="menu__link" href="#contact">Contact </a></li>
 
     </ul>
-    <a href="tel:+917008719018">+91 7008719018</a>
+    <a href="tel:+917008719018" className='details'>+91 7008719018</a>
+    <a href="mailto:DucknChill-Agonda@Beaches-Of-Goa.com" className='details'>DucknChill-Agonda@Beaches-Of-Goa.com</a>
     <p>&copy;2023 DuckNChill | All Rights Reserved</p>
   </footer>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+
       </FooterContainer>
 
   )
@@ -116,28 +116,14 @@ a{
   font-weight: 300;
 }
 
-
-
-@keyframes animateWaves {
-  0% {
-    background-position-x: 1000px;
-  }
-  100% {
-    background-positon-x: 0px;
+.details{
+  margin-top: 8px;
+  :hover{
+    color: #a8a8a8ac;
+    font-weight: 600;
   }
 }
 
-@keyframes animate {
-  0% {
-    background-position-x: -1000px;
-  }
-  100% {
-    background-positon-x: 0px;
-  }
-}
-@media screen and (max-width: 1080px){
-  margin-top: 0rem;
-  min-height:0;
-}
+
 
 `

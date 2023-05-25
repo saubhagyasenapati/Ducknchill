@@ -1,15 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import img from '../Asset/contact.png'
-import { useState } from 'react';
+
 const Contactus = () => {
    
   return (
-    <Section id="contact">
+    <Section id="enquiry">
 	<div class="container">
-    <h2 className='header'>Contact Us</h2>
+    <h2 className='header'>Booking Enquiry</h2>
 		<div class="contact-box">
-				<form action="https://formspree.io/f/xzbqyaob" method="post">
+				<form name='contact' data-netlify="true" onSubmit="submit">
                 <input type="text" class="field" placeholder="Your Name" name="Name" required/>
 				<input type="text" class="field" placeholder="Your Email" name="Email" required/>
 				<input type="text" class="field" placeholder="Phone" name="Phone Number" required/>
@@ -18,7 +17,6 @@ const Contactus = () => {
                 <input placeholder="Check In" class="field" type='date' name="Check In"/>
                 <br /> <label for="html">Check Out</label><br />
                 <input placeholder="Check Out" class="field" type="date" name="Check Out"/>
-                <input type="hidden" name="_next" value="https://ducknchill.netlify.app/"></input>
                 <button class="btn" type='submit'>Send</button>
                 </form>
 			
@@ -127,7 +125,7 @@ h2:after{
 }
 
 .btn:hover{
-    background-color: #27ae60;
+    background-color: #232B2B;
 }
 
 .field:focus{
@@ -158,5 +156,5 @@ label{
     font-family: "Lobster", cursive;
     font-size:1rem; 
 }
-
+}
 `

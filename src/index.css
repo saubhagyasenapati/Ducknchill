@@ -20,7 +20,7 @@ code {
 }
 
 ::-webkit-scrollbar{
-  width:1rem;
+  width:0.6rem;
   background-color: #4d4d4d;
 }
 ::-webkit-scrollbar-thumb{

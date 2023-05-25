@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
 import styled from "styled-components"
-import logo from "../Asset/logo.jpg"
+
 import {IoLogoWhatsapp} from "react-icons/io"
 import{GiHamburgerMenu} from "react-icons/gi"
 import {VscChromeClose} from "react-icons/vsc"
 
 export default function Navbar() {
     const[navbarState,setNavbarState]=useState(false);
+    
   return (
     <>
      <Nav >
@@ -22,6 +23,7 @@ export default function Navbar() {
                 }
               </div>
          </div>
+         <div className='menu'>
          <ul>
             <li><a href="/" >Home</a> </li>
             <li><a href="#about">About</a> </li>
@@ -29,8 +31,10 @@ export default function Navbar() {
             <li><a href="#restaurant">Restaurant</a> </li>
             <li><a href="#location">Location</a> </li>
             <li><a href="#gallery">Gallery</a> </li>  
-            <li><a href="#contact">Contact</a> </li>
+            <li><a href="#enquiry">Enquiry</a> </li>
          </ul>
+         </div>
+    
          <button> <a href="https://wa.me/+917008719018"><IoLogoWhatsapp className='icon'/></a> </button>
      </Nav>
      <ResponsiveNav state={navbarState}>
@@ -65,7 +69,7 @@ padding:5px ;
         cursor:pointer;
         display:flex;
         justify-content:center;
-        align-item:center;
+        align-items:center;
         gap:1rem;
         font-size:2.5rem;
         font-family: 'Yellowtail', cursive;
@@ -76,26 +80,31 @@ padding:5px ;
     }
     
 }
+
 ul{
-    display:flex;
+   
     list-style-type:none;
     gap:1rem;
+    display:flex;
+   margin-top: 8px;
     li
     {
+        
         a{
             text-decoration:none;
             color:#fff;
             font-size:1.3rem;
             transition:0ms.1s ease-in-out ;
-            font-weight:700;
+            font-weight:600;
             &:hover{
-                color:#A8A8A8;
+                color:#646670;
+                font-weight:700;
             }
         }
         &:first-of-type{
            a{
             color:#fff;
-            font-weight:900;
+            font-weight:700;
            } 
         }
     }
@@ -111,7 +120,7 @@ button{
     background-color:#80CB7A;
     text-transform:uppercase;
     font-size:1rem;
-    letter-spacing:0.1rem
+    letter-spacing:0.1rem;
     transition:0.3s ease-in-out ;
     &:hover{
         background-color:#3CD72F;
@@ -140,7 +149,7 @@ button{
     display:none;
    }
   }
-`;
+`
 const ResponsiveNav=styled.div`
 display:flex;
 position:absolute;
@@ -163,6 +172,9 @@ ul{
     li{
         display: list-item;
         width:100%;
+        &:hover{
+            background: rgba(0,0,0, 0.6);
+            }
         a{
             text-decoration:none ;
             color:#fff;
@@ -171,7 +183,8 @@ ul{
             transition:0ms.1s ease-in-out ;
             font-family: "Archivo", sans-serif;
             &:hover{
-                color:#A8A8A8;
+                color:#cfcfdd;
+                font-weight:800;
             }
         }
       
