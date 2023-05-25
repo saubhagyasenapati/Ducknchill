@@ -4,15 +4,19 @@ import image1 from "../Asset/Gallery/photo1.jpg";
 import image2 from "../Asset/Gallery/photo2.jpg";
 import image3 from "../Asset/Gallery/photo3.jpg";
 import image4 from "../Asset/Gallery/photo4.jpg";
-import image5 from "../Asset/Gallery/photo9.jpg";
+import image5 from "../Asset/Gallery/photo5.jpg";
 import image6 from "../Asset/Gallery/photo6.jpg";
 import image7 from "../Asset/Gallery/photo7.jpg";
 import image8 from "../Asset/Gallery/photo8.jpg";
-import image9 from "../Asset/Gallery/photo10.jpg";
-import image10 from "../Asset/Gallery/photo11.jpg";
-import image11 from "../Asset/Gallery/photo13.jpg";
-import image12 from "../Asset/Gallery/photo14.jpg";
-import image13 from "../Asset/Gallery/photo15.jpg";
+import image9 from "../Asset/Gallery/photo9.jpg";
+import image10 from "../Asset/Gallery/photo10.jpg";
+import image11 from "../Asset/Gallery/photo11.jpg";
+import image13 from "../Asset/Gallery/photo13.jpg";
+import image14 from "../Asset/Gallery/photo14.jpg";
+import image15 from "../Asset/Gallery/photo15.jpg";
+import image16 from "../Asset/Gallery/photo16.jpg";
+import image17 from "../Asset/Gallery/photo17.jpg";
+import image18 from "../Asset/Gallery/photo18.jpg";
 const MyGallery = () => {
   let data = [
     {
@@ -34,23 +38,24 @@ const MyGallery = () => {
     },
     {
       id: 5,
-      imgsrc: image5,
-    },
-    {
-      id: 6,
       imgsrc: image6,
     },
     {
+      id: 9,
+      imgsrc: image9,
+    },
+    {
       id: 7,
-      imgsrc: image7,
+      imgsrc: image17,
     },
     {
       id: 8,
       imgsrc: image8,
     },
+  
     {
-      id: 9,
-      imgsrc: image9,
+      id: 6,
+      imgsrc: image7,
     },
     {
       id: 10,
@@ -61,8 +66,28 @@ const MyGallery = () => {
       imgsrc: image11,
     },
     {
-      id: 12,
-      imgsrc: image12,
+      id: 13,
+      imgsrc: image13,
+    },
+    {
+      id: 14,
+      imgsrc: image14,
+    },
+    {
+      id: 15,
+      imgsrc: image15,
+    },
+    {
+      id: 16,
+      imgsrc: image16,
+    },
+    {
+      id: 17,
+      imgsrc: image5,
+    },
+    {
+      id: 18,
+      imgsrc: image18,
     },
  
   ];
@@ -124,15 +149,14 @@ padding: 50px;
   }
 
   .gallerygrid {
-display: grid;
-grid-template-columns: 35% 35% 20% 10%;
+display: flex;
+flex-wrap: wrap;
   }
   .pics {
     padding: 10px 10px 10px 10px;
     img {
       width: 100%;
       height: 350px;
-      object-fit: cover;
       cursor: pointer;
       :hover {
         filter: opacity(0.8);
@@ -198,8 +222,7 @@ grid-template-columns: 35% 35% 20% 10%;
   }
   @media (max-width: 991px) {
     .gallerygrid {
-      display: grid;
-grid-template-columns: 40% 35% 25% ;
+
     }
     .pics {
       padding: 15px;
@@ -212,8 +235,6 @@ grid-template-columns: 40% 35% 25% ;
     padding: 10px;
     
     .gallerygrid {
-      display: grid;
-    grid-template-columns: 30% 40% 30% ;
     height: 370px; /* or any value */
     overflow-y: auto;
     }
