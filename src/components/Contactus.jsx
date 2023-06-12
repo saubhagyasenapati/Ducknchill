@@ -54,14 +54,14 @@ const Contactus = () => {
                 <button class="btn" type='submit'>Send</button>
                 </form>
 			</div>
-			<div className='contactdetails'>
+			{/* <div className='contactdetails'>
 				<p>Contact us</p>
 				<div>
 				<a href="mailto:">DucknChill-Agonda@Beaches-Of-Goa.com</a>
 				<a href="tel:+917008719018">+91 7008719018</a>
 				</div>
 				
-			</div>
+			</div> */}
 			<ToastContainer
 position="bottom-right"
 autoClose={3000}
@@ -86,7 +86,7 @@ const Section=styled.section`
 margin-top:2rem;    
 width:100%;
 height:100%;   
-.contactdetails{
+/* .contactdetails{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -114,7 +114,7 @@ height:100%;
 	}
 	}
 	
-} 
+}  */
 .header{
     font-family: "Lobster", cursive;
     font-size: 4rem;

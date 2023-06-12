@@ -32,11 +32,11 @@ const Section=styled.section`
 	padding:0.3rem 0.6rem;
 	bottom:40px;
 	right:30px;
-	background-color:#3CD72F;
+	background-color:#28D146;
 	color:#FFF;
 	border-radius:50px;
     display:flex;
-	align-item:center;
+	align-items:center;
 	box-shadow: 2px 2px 3px #999;
     
     border:none;

@@ -9,11 +9,11 @@ export default function Footer() {
        <footer class="footer">
  <h1 className='title'>DuckNChill</h1>
     <ul class="social-icon">
-      <li class="social-icon__item"><a class="social-icon__link" href="https://m.facebook.com/people/DucknChill-Agonda/100063791744205/" target="_blank">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://m.facebook.com/people/DucknChill-Agonda/100063791744205/" rel="noreferrer" target="_blank">
       <BsFacebook/>
         </a></li>
-      <li class="social-icon__item"> <a class="social-icon__link"  href="https://www.tripadvisor.com/Hotel_Review-g816969-d4978980-Reviews-Duck_n_Chill-Agonda_South_Goa_District_Goa.html" target="_blank" rel="noopener noreferrer"><SiTripadvisor/></a></li>
-      <li class="social-icon__item">   <a href="https://wa.me/7008719018" target="_blank" class="social-icon__link"  rel="noopener noreferrer"> <IoLogoWhatsapp/></a></li>
+      <li class="social-icon__item"> <a class="social-icon__link" rel="noreferrer"  href="https://www.tripadvisor.com/Hotel_Review-g816969-d4978980-Reviews-Duck_n_Chill-Agonda_South_Goa_District_Goa.html" target="_blank"><SiTripadvisor/></a></li>
+      <li class="social-icon__item">   <a href="https://wa.me/7008719018" rel="noreferrer"  target="_blank" class="social-icon__link" > <IoLogoWhatsapp/></a></li>
     </ul>
     <ul class="menu">
       <li class="menu__item"><a class="menu__link" href="/">Home</a></li>
@@ -24,7 +24,8 @@ export default function Footer() {
       <li class="menu__item"><a class="menu__link" href="#enquiry">Enquiry</a></li>
 
     </ul>
-    <a href="tel:+917008719018" className='details'>+91 7008719018</a>
+    <a > <a href="tel:+917008719018" className='details'>+91 7008719018</a> <a style={{color:'white'}}>/</a> <a href="tel:+917517678938" className='details'>+91 7517678938</a></a>
+   
     <a href="mailto:DucknChill-Agonda@Beaches-Of-Goa.com" className='details'>DucknChill-Agonda@Beaches-Of-Goa.com</a>
     <p>&copy;2023 DuckNChill | All Rights Reserved</p>
   </footer>
@@ -35,9 +36,6 @@ export default function Footer() {
 }
 
 const FooterContainer=styled.footer`
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-
-
   margin-top: 1rem;
   padding: 0;
   box-sizing: border-box;
@@ -76,6 +74,7 @@ a{
   align-items: center;
   margin: 10px 0;
   flex-wrap: wrap;
+  padding-left: 0rem;
 }
 
 .social-icon__item,
@@ -118,6 +117,7 @@ a{
 
 .details{
   margin-top: 8px;
+  text-align: center;
   :hover{
     color: #a8a8a8ac;
     font-weight: 600;

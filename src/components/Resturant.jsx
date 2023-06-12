@@ -16,42 +16,66 @@ const Resturant = () => {
       <div className="resturantbox">
         <Carousel variant="dark">
           <Carousel.Item interval={2000}>
-            <img className="d-block mx-auto" src={image1} alt="First slide" />
+            <img
+              className="d-block mx-auto"
+              src={image1}
+              alt="Seafood,Meat,Crab,Prawn,Beer,Vodka,Cocktail"
+            />
           </Carousel.Item>
           <Carousel.Item interval={2000}>
-            <img className="d-block mx-auto" src={image2} alt="Second slide" />
+            <img
+              className="d-block mx-auto"
+              src={image2}
+              alt="Seafood,Meat,Crab,Prawn,Beer,Vodka,Cocktail"
+            />
           </Carousel.Item>
           <Carousel.Item interval={2000}>
-            <img className="d-block mx-auto" src={image4} alt="Third slide" />
+            <img
+              className="d-block mx-auto"
+              src={image4}
+              alt="Seafood,Meat,Crab,Prawn,Beer,Vodka,Cocktail"
+            />
           </Carousel.Item>
           <Carousel.Item interval={2000}>
-            <img className="d-block mx-auto" src={image5} alt="Third slide" />
+            <img
+              className="d-block mx-auto"
+              src={image5}
+              alt="Seafood,Meat,Crab,Prawn,Beer,Vodka,Cocktail"
+            />
           </Carousel.Item>
           <Carousel.Item interval={2000}>
-            <img className="d-block mx-auto" src={image7} alt="Third slide" />
+            <img
+              className="d-block mx-auto"
+              src={image7}
+              alt="Seafood,Meat,Crab,Prawn,Beer,Vodka,Cocktail"
+            />
           </Carousel.Item>
           <Carousel.Item interval={2000}>
-            <img className="d-block mx-auto" src={image8} alt="Third slide" />
+            <img
+              className="d-block mx-auto"
+              src={image8}
+              alt="Seafood,Meat,Crab,Prawn,Beer,Vodka,Cocktaile"
+            />
           </Carousel.Item>
         </Carousel>
         <div className="resturantDetail">
           <p className="aboutrestaurant">
-            Here at Duck n Chill, we have a cozy bar and restaurant overlooking
-            the Arabian Sea beach where you can enjoy listening to good music
-            whilst watching the waves lap the seashore. From breakfast through
-            to dinner, we will cater for everything to ensure you have the most
-            pleasurable stay. We take pride in serving you the best Goan cuisine
-            and fresh fish Agonda has to offer. Kingfish is the most common
-            delicacy, followed by shellfish such as crabs, shrimps, king prawns,
-            lobster and mussels. For lighter meals, we have freshly squeezed
-            fruit juices, tropical fruit salads, sandwiches and plenty of other
-            national and international cuisines to suit all tastes. Location
+            Beach View Restaurant and Bar is a delightful dining destination
+            situated near the beach, which offers both indoor and outdoor
+            seating areas. The restaurant has Himachali chefs who specialize in
+            creating authentic Indian, local, and international cuisine. Diners
+            will delight in the varied menu, which features dishes made with
+            locally sourced ingredients that are both fresh and delicious. Sea
+            food is our specialty. The bar also serves a range of exotic
+            cocktails, local beers, and fine wines. Guests can enjoy a
+            picturesque view of the ocean while savoring their meals, making it
+            a perfect spot for a pleasant dining experience.
           </p>
           <p>Cuisine Offered</p>
           <ul>
-            <li>Italian</li>
-            <li>Mexiacan</li>
+            <li>Fresh Seafood</li>
             <li>Indian</li>
+            <li>Continental</li>
           </ul>
         </div>
       </div>

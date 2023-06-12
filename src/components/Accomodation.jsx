@@ -97,12 +97,21 @@ function MyVerticallyCenteredModal(props) {
                     );
                   })}
               </Carousel>
-              <div>
-                <p className="desc">Description</p>
-                <p className="sub">{props.room.subTitle}</p>
-              </div>
+           
             </div>
             <div className="Modalboxright">
+            <div>
+                <p className="desc">Description</p>
+                <p className="sub">{props.room.description}</p>
+              </div>
+            <div >
+              <p className="desc">Amenities</p>
+              <ul>
+      {props.room.amenties&&props.room.amenties.map((element, index) => (
+        <li key={index}>{element}</li>
+      ))}
+    </ul>
+            </div>
               <p className="title">Send Us Details for Booking</p>
               <div class="contact-box">
               <form name='contact' onSubmit={sendEmail}>
@@ -184,33 +193,84 @@ export default function Accomodation() {
     {
       image: [Room11, Room12, Room13, Room14],
       title: "Beach Front Huts",
-      subTitle:
-        "We have 2 beautiful beach front huts which sit directly on the beach overlooking the Arabian Sea. ",
+      subTitle:"Handcrafted Beach Front hut with ocean views, stunning sunsets, and rustic charm. Equipped with AC for comfort. Perfect tropical retreat to relax, unwind, and immerse in nature's beauty.",
+      amenties:[  "King size bed",
+      "En-suite bathroom",
+      "Hot shower",
+      "Mosquito net",
+      "Fan",
+      "Verandah with sofa and a table",
+      "Free wifi, Bed linen and towels",
+      "Wardrobe",
+      "Mini Fridge",
+      "Work desk",
+      "Mirror",
+      "Dry clothes hanger",
+      "Air conditioned",
+      "2 Sun bed one umbrella",
+      "Inside Room sofa and chair"],
+      description:
+        "This handcrafted beach front hut is the ultimate tropical retreat. With full ocean views and a front-row seat to stunning sunsets, it offers the perfect place to relax and unwind. The hut is equipped with air conditioning, ensuring a comfortable stay no matter the outside temperature. Its unique design features handmade elements that add a rustic charm to the space. This beach front hut is the perfect getaway for anyone looking to disconnect from the hustle and bustle of daily life and immerse themselves in the beauty of nature.",
     },
     {
       image: [Room21, Room22, Room23, Room24, Room25],
-      title: "Sea View Huts",
-      subTitle:
-        "Our 2 sea view huts are elevated just behind the beach front huts to give you more privacy with stunning views of the sea.",
+      title: "Full Sea View Upstairs Huts",
+      subTitle:"Upstairs sea view hut with 180° agonda beach view. Air conditioned for comfort. Private balcony to watch sunset and enjoy the serene surroundings. Cozy and charming retreat for relaxation and ocean tranquility.",
+      amenties :[
+        "King size bed",
+        "Wardrobe",
+        "En-suite open bathroom",
+        "Hot shower",
+        "Mosquito net",
+        "Fan",
+        "Balcony with table and chairs",
+        "Free WIFI, Bed linen and towels"
+      ],      
+      description:
+        "Our handcrafted sea view hut is located upstairs and boasts a stunning 180° agonda beach  view. It is air conditioned to ensure your comfort even on the hottest days. Watch the sunset from your private balcony as you relax and soak in the beauty of the surrounding landscape. This cozy and charming hut is the perfect getaway spot for anyone looking to unwind and experience the tranquility of the ocean.",
     },
     {
       image: [Room31, Room32, Room33, Room34, Room35, Room36],
-      title: "Standard Huts",
-      subTitle:
-        "Our standard huts are made of wood with Indian rice grass water-tight thatched roofs.",
+      title: "Garden View Huts",
+      subTitle:"Beautifully crafted garden view hut with traditional coconut leaf roof. Cozy balcony with sofa and table for relaxation. Serene surroundings. Sleep to ocean waves. Handcrafted oasis for a peaceful and authentic tropical experience.",
+     amenties : [
+        "King size bed",
+        "Mosquito net",
+        "Fan",
+        "Free wifi, Bed linen and towels",
+        "En-suite bathroom",
+        "Wardrobe"
+      ],
+      description:
+        "This charming garden view hut is a beautifully crafted wooden structure with traditional coconut leaves on the roof to keep the interior cool and comfortable. The hut features a cozy balcony complete with a comfortable sofa and table, offering the perfect spot to relax and soak in the stunning natural surroundings. As night falls, guests can drift off to sleep to the soothing sound of ocean waves. This handcrafted oasis is a true gem for those seeking a peaceful and authentic tropical experience.",
+    },
+    {
+      image: [Room31, Room32, Room33, Room34, Room35, Room36],
+      title: "Budget Garden View Huts",
+      subTitle:"Budget-friendly garden view hut with unique fusion design of wooden walls and coconut leaf roof. Cool and soothing atmosphere. Balcony with comfortable sofa and table. Perfect for peace and quiet amidst lush greenery.",
+     amenties:["Queen size bed",
+     "Mosquito net",
+     "Fan",
+     "Free wifi, Bed linen and towels",
+     "En-suite bathroom",
+     "Wardrobe"],
+      description:
+        "The handcrafted budget friendly garden view hut features a unique design is a fusion of wooden walls combined with coconut leaves on the roof, which provides a cool and soothing atmosphere inside the room. The balcony space offers a comfortable sofa and a table for an enjoyable outdoor experience. This room is ideal for people who seek peace and quiet away from the beach crowds, and would like to enjoy the lush greenery and peaceful ambiance of the garden.",
     },
     {
       image: [Room41, Room42, Room43, Room44, Room45, Room46],
-      title: "Superior AC Cottages",
-      subTitle:
-        "Our two superior AC cottages are concrete built with a tiled roof quietly situated to the rear yet still a minute walk to the beach.",
+      title: "Garden View AC Huts",
+      subTitle:"Cozy garden view AC cottage with traditional roof tiles. Balcony with comfortable chairs for relaxation. Air conditioning for comfort. Serene atmosphere amidst lush greenery. Enjoy the natural beauty.",
+      amenties:["Queen size bed",
+      "Mosquito net",
+      "Fan",
+      "Free wifi, Bed linen and towels",
+      "En-suite bathroom",
+      "Wardrobe"],
+      description:
+        "The garden view AC cottage is a cozy accommodation featuring a traditional roof tiles design as this is durable and  with a balcony offering two comfortable chairs for guests to relax and admire the lush greenery around. The cottage is fitted with an air conditioning unit to ensure a comfortable stay in any weather. The garden view provides a serene atmosphere and a chance to soak in the natural beauty.",
     },
-    {
-      image: [Room51, Room52, Room53, Room54],
-      title: "Budget Huts",
-      subTitle:
-        "Our 2 budget huts are built the same way as the standard huts, just a little further away from the beach.",
-    },
+  
   ];
 
   const handleScroll = (event) => {
@@ -233,7 +293,7 @@ export default function Accomodation() {
         {data.map((roomimages) => {
           return (
             <div className="roomimages">
-              <img src={roomimages.image[0]} alt="" />
+              <img src={roomimages.image[0]} alt="Resort Room" />
               <h3>{roomimages.title}</h3>
               <p>{roomimages.subTitle}</p>
 
@@ -369,7 +429,12 @@ const Sec = styled.section`
     display: flex;
     flex-direction: row;
   }
-
+  ul{
+  
+   li{
+    font-weight: 600;
+   }
+  }
   p {
     font-size: 1.2rem;
     font-family: "Archivo", sans-serif;

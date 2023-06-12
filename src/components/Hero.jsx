@@ -20,7 +20,7 @@ export default function Hero() {
               <img
                 className="d-block mx-auto"
                 src={homeimage}
-                alt="First slide"
+                alt="Serene View,Horses,Sunrise,Goa"
                 loading="eager"
               />
             </Carousel.Item>
@@ -28,7 +28,7 @@ export default function Hero() {
               <img
                 className="d-block mx-auto"
                 src={homeimage2}
-                alt="First slide"
+                alt="Night,Beach,People,Restaurant,Candle Light"
                 loading="eager"
               />
             </Carousel.Item>
@@ -36,14 +36,14 @@ export default function Hero() {
               <img
                 className="d-block mx-auto"
                 src={homeimage3}
-                alt="First slide"
+                alt="Beach Shack,People,beer,Resturant"
                 loading="eager"
               />
             </Carousel.Item>
           </Carousel>
         </div>
         <div className="maintext">
-          <h1 className="textmain">Welcome To Our Humble Abort</h1>
+          <h1 className="textmain">Home away from home!</h1>
 
           <p className="content">
             A charming resort to unwind and chill located on the long, peaceful
