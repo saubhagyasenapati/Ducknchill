@@ -12,7 +12,7 @@ import About from './components/About'
 import Whatsapp from './components/Whatsapp'
 import Contactus from './components/Contactus'
 import Policies from './components/Policies'
-import Awards from './components/Awards'
+// import Awards from './components/Awards'
 import Offer from './components/Offer'
 
  function App() {

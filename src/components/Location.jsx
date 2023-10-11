@@ -11,7 +11,7 @@ export default function Location() {
         <div className="loc">
       
          <div className="googlemap">
-         <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3852.92979382155!2d73.97981331483129!3d15.051998989516267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbe4fa1e2aed205%3A0xe9890ebe296f85e2!2sDuck%20N%20Chill%20-%20Agonda!5e0!3m2!1sen!2sin!4v1665912546524!5m2!1sen!2sin" width="100%" height="200px" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <iframe title='ducknchillmap'className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3852.92979382155!2d73.97981331483129!3d15.051998989516267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbe4fa1e2aed205%3A0xe9890ebe296f85e2!2sDuck%20N%20Chill%20-%20Agonda!5e0!3m2!1sen!2sin!4v1665912546524!5m2!1sen!2sin" width="100%" height="200px" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
          </div>
          </div>
          

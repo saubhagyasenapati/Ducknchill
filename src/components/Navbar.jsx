@@ -120,8 +120,9 @@ const Nav = styled.nav`
       justify-content: center;
       align-items: center;
       gap: 1rem;
-      font-size: 2.5rem;
-      font-family: "Yellowtail", cursive;
+      font-size: 2.3rem;
+      /* font-family: "Yellowtail", cursive; */
+      font-family: 'Dancing Script', cursive;
       color: #fff;
     }
     .toggle {
@@ -137,7 +138,7 @@ const Nav = styled.nav`
     gap: 1rem;
     display: flex;
     padding-left: 0rem;
-    margin-top: 15px;
+    margin-top: 17px;
     li {
       a {
         text-decoration: none;
@@ -145,6 +146,7 @@ const Nav = styled.nav`
         font-size: 1.3rem;
         transition: 0ms.1s ease-in-out;
         font-weight: 600;
+        font-family: "Archivo", sans-serif;
         &:hover {
           color: #a5a6af;
           font-weight: 700;

@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import emailjs from 'emailjs-com';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Contactus = () => {
+	const [loading, setloading] = useState(false)
 	const sendEmail = (e) => {
 		e.preventDefault();
-	  
+	    setloading(true)
 		// EmailJS parameters
 		const serviceID = process.env.REACT_APP_serviceID;
 		const templateID =  process.env.REACT_APP_templateID;
@@ -23,16 +24,18 @@ const Contactus = () => {
 		  check_in: e.target['Check In'].value,
 		  check_out: e.target['Check Out'].value,
 		};
-	  
+	
 		// Send the email
 		emailjs.send(serviceID, templateID, templateParams, userID)
-		  .then((response) => {
-			toast("Form Submitted Successfully!");
-		  })
-		  .catch((error) => {
-			toast("Form Couldn't be Submitted!");
-		  });
-	  
+		.then((response) => {
+		  toast("Booking Enquiry Sent Successfully! we will get back to you soon.");
+		  setloading(false);
+		})
+		.catch((error) => {
+		  toast("Booking Enquiry couldn't be sent, please contact us on the number given below");
+		  setloading(false);
+		});
+	
 		// Reset the form after submission
 		e.target.reset();
 		
@@ -51,7 +54,9 @@ const Contactus = () => {
                 <input placeholder="Check In" class="field" type='date' name="Check In"/>
                 <br /> <label for="html">Check Out</label><br />
                 <input placeholder="Check Out" class="field" type="date" name="Check Out"/>
-                <button class="btn" type='submit'>Send</button>
+				<button className="btn" type='submit' disabled={loading}>
+        {loading ? 'Sending...' : 'Send'}
+      </button>
                 </form>
 			</div>
 			{/* <div className='contactdetails'>

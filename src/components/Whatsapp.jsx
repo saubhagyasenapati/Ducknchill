@@ -31,7 +31,7 @@ const Section=styled.section`
     z-index:15;
 	padding:0.3rem 0.6rem;
 	bottom:40px;
-	right:30px;
+	right:20px;
 	background-color:#28D146;
 	color:#FFF;
 	border-radius:50px;

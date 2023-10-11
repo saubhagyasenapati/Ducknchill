@@ -24,10 +24,11 @@ export default function Footer() {
       <li class="menu__item"><a class="menu__link" href="#enquiry">Enquiry</a></li>
 
     </ul>
-    <a > <a href="tel:+917008719018" className='details'>+91 7008719018</a> <a style={{color:'white'}}>/</a> <a href="tel:+917517678938" className='details'>+91 7517678938</a></a>
+    <a >
+       <a href="tel:+917008719018" className='details'>+91 7008719018</a> <a style={{color:'white'}}>/</a> <a href="tel:+917517678938" className='details'>+91 7517678938</a></a>
    
-    <a href="mailto:DucknChill-Agonda@Beaches-Of-Goa.com" className='details'>DucknChill-Agonda@Beaches-Of-Goa.com</a>
-    <p>&copy;2023 DuckNChill | All Rights Reserved</p>
+    <a href="mailto:ducknchillgoa@gmail.com" className='details'>ducknchillgoa@gmail.com</a>
+    <p>&copy;{new Date().getFullYear()} DuckNChill | All Rights Reserved</p>
   </footer>
 
       </FooterContainer>

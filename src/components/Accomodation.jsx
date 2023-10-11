@@ -21,10 +21,10 @@ import Room43 from "../Asset/Superior Ac cottage/pic2.webp";
 import Room44 from "../Asset/Superior Ac cottage/pic3.webp";
 import Room45 from "../Asset/Superior Ac cottage/pic4.webp";
 import Room46 from "../Asset/Superior Ac cottage/pic5.webp";
-import Room51 from "../Asset/Budgett hut/Room5.webp";
-import Room52 from "../Asset/Budgett hut/pic1.webp";
-import Room53 from "../Asset/Budgett hut/pic2.webp";
-import Room54 from "../Asset/Budgett hut/pic3.webp";
+// import Room51 from "../Asset/Budgett hut/Room5.webp";
+// import Room52 from "../Asset/Budgett hut/pic1.webp";
+// import Room53 from "../Asset/Budgett hut/pic2.webp";
+// import Room54 from "../Asset/Budgett hut/pic3.webp";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
@@ -32,10 +32,12 @@ import emailjs from 'emailjs-com';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 function MyVerticallyCenteredModal(props) {
+  const [loading, setloading] = useState(false)
   const sendEmail = (e) => {
 		e.preventDefault();
-	  
+    setloading(true)
 		// EmailJS parameters
 		const serviceID = process.env.REACT_APP_serviceID;
 		const templateID =  process.env.REACT_APP_templateID2;
@@ -54,14 +56,15 @@ function MyVerticallyCenteredModal(props) {
 		};
 	  
 		// Send the email
-		emailjs.send(serviceID, templateID, templateParams, userID)
-		  .then((response) => {
-			toast("Form Submitted Successfully!");
-		  })
-		  .catch((error) => {
-			toast("Form Couldn't be Submitted!");
-		  });
-	  
+    emailjs.send(serviceID, templateID, templateParams, userID)
+		.then((response) => {
+		  toast("Booking Enquiry Sent Successfully! we will get back to you soon.");
+		  setloading(false);
+		})
+		.catch((error) => {
+      toast("Booking Enquiry couldn't be sent, please contact us on the number +91 7008719018 / +91 7517678938 ");
+		  setloading(false);
+		});
 		// Reset the form after submission
 		e.target.reset();
 		
@@ -83,13 +86,14 @@ function MyVerticallyCenteredModal(props) {
           </div>
           <div className="Modalbox">
             <div className="Modalboxleft">
-              <Carousel>
+              <Carousel  variant="dark">
                 {props.room.image &&
                   props.room.image.map((img) => {
                     return (
                       <Carousel.Item interval={2000}>
                         <img
-                          className="d-block mx-auto"
+                          // className="d-block mx-auto"
+                          className="full-width-image"
                           src={img}
                           alt="First slide"
                         />
@@ -105,7 +109,7 @@ function MyVerticallyCenteredModal(props) {
                 <p className="sub">{props.room.description}</p>
               </div>
             <div >
-              <p className="desc">Amenities</p>
+              <p className="amenities">Amenities</p>
               <ul>
       {props.room.amenties&&props.room.amenties.map((element, index) => (
         <li key={index}>{element}</li>
@@ -157,9 +161,9 @@ function MyVerticallyCenteredModal(props) {
                 <label for="html">Check Out</label>
                 <input placeholder="Check Out" class="field" type="date" name="Check Out"/>
                   </div>
-                  <button class="btn" type="submit">
-                    Send
-                  </button>
+                  <button className="btn" type='submit' disabled={loading}>
+        {loading ? 'Sending...' : 'Send'}
+      </button>
                 </form>
               </div>
             </div>
@@ -429,12 +433,7 @@ const Sec = styled.section`
     display: flex;
     flex-direction: row;
   }
-  ul{
   
-   li{
-    font-weight: 600;
-   }
-  }
   p {
     font-size: 1.2rem;
     font-family: "Archivo", sans-serif;
@@ -446,6 +445,18 @@ const Sec = styled.section`
     margin-top: 10px;
     font-family: "Lobster", cursive;
     font-size: 1.5rem;
+  }
+  ul{
+      li{
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+      }
+    }
+  .amenities{
+    margin-top: 10px;
+    font-family: "Lobster", cursive;
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
   }
   .titlemain {
     font-family: "Lobster", cursive;
@@ -460,7 +471,7 @@ const Sec = styled.section`
     }
     .carousel-item {
       img {
-        object-fit: cover;
+        object-fit: contain;
         height: 500px;
         width: 100%;
       }
@@ -512,10 +523,15 @@ const Sec = styled.section`
       }
     }
   }
+
   @media  screen and (max-device-width: 1080px) {
     p {
     font-size: 1rem;
     
+  }
+
+  .amenities{
+    font-size: 1.3rem;
   }
   label{
     font-family: "Lobster", cursive;
@@ -546,8 +562,8 @@ const Sec = styled.section`
 
     .carousel-item {
       img {
-        object-fit: cover;
-        height: 350px;
+        object-fit: contain;
+        height: 400px;
         width: 100%;
       }
     }
@@ -572,4 +588,5 @@ const Sec = styled.section`
     }
   }
 }
+
 `;

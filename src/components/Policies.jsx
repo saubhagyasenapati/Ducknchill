@@ -54,9 +54,11 @@ flex-direction:column;
     }
   }
   @media screen and (max-width: 1080px){
+  
     .title {
     font-size: 3rem;}
     .policies{
+      padding: 2rem;
         li{
         font-size:0.8rem;
         

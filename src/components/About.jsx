@@ -5,20 +5,26 @@ const About = () => {
     <Section id="about">
       <div className="content">
         <div className="title">
-          <h1>About</h1>
+          <h1>About Us</h1>
           <p>
             Introducing our handcrafted beach side resort, situated in the North
             of Agonda beach at the stunning meeting point of the Arabian Sea and
-            the river. Duck N Chill is a striking manifestation of Shiv’s
+            the river. 
+            </p>
+            <p>DuckNChill is a striking manifestation of Shiv’s
             immense sense of pride in Indian roots. Right from the idea of the
             resort to its design, planning, and execution everything evolved
             from owner’s passion and single-minded determination to create a
-            property that is completely handcrafted. It’s a fusion of pine wood
+            property that is completely handcrafted.</p>
+           
+         
+          <p>
+          It’s a fusion of pine wood
             and coconut leaves. The resort is beautifully landscaped with lush
             green gardens and soothing ocean breezes for ultimate relaxation.
             Watch the breathtaking sunset views and unwind in our
             environmentally-friendly accommodation, designed to blend seamlessly
-            with the natural surroundings.{" "}
+            with the natural surroundings.
           </p>
         </div>
         <div className="timming">
@@ -45,7 +51,7 @@ const Section = styled.section`
         font-family: "Lobster", cursive;
       }
       p {
-        text-align: justify;
+        text-align: center;
         margin-top: 1rem;
         font-size: 1.4rem;
         font-family: "Archivo", sans-serif;
